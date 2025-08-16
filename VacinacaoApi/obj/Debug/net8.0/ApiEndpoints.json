@@ -46,5 +46,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VacinacaoApi.Controllers.VacinasController",
+    "Method": "CriarVacina",
+    "RelativePath": "api/Vacinas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "VacinacaoApi.Features.Vacinas.Commands.CriarVacinaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VacinacaoApi.Controllers.VacinasController",
+    "Method": "ListarVacinas",
+    "RelativePath": "api/Vacinas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

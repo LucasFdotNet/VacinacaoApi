@@ -79,6 +79,47 @@
           }
         }
       }
+    },
+    "/api/Vacinas": {
+      "post": {
+        "tags": [
+          "Vacinas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarVacinaCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarVacinaCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarVacinaCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Vacinas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -91,6 +132,16 @@
             "nullable": true
           },
           "numeroIdentificacao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarVacinaCommand": {
+        "type": "object",
+        "properties": {
+          "nome": {
             "type": "string",
             "nullable": true
           }
