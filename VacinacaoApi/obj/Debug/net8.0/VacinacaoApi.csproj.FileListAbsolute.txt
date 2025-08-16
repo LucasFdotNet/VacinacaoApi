@@ -168,10 +168,11 @@ C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebas
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\Vacinaca.82B27AB6.Up2Date
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.dll
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\refint\VacinacaoApi.dll
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.pdb
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.genruntimeconfig.cache
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\ref\VacinacaoApi.dll
+C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.sourcelink.json
+C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
