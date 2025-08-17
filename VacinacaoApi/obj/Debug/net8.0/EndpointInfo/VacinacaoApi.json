@@ -80,6 +80,92 @@
         }
       }
     },
+    "/api/Pessoas/{pessoaId}/vacinacoes": {
+      "post": {
+        "tags": [
+          "Pessoas"
+        ],
+        "parameters": [
+          {
+            "name": "pessoaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarVacinacaoCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarVacinacaoCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarVacinacaoCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Pessoas"
+        ],
+        "parameters": [
+          {
+            "name": "pessoaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RegistrosVacinacao/{id}": {
+      "delete": {
+        "tags": [
+          "RegistrosVacinacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Vacinas": {
       "post": {
         "tags": [
@@ -144,6 +230,24 @@
           "nome": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrarVacinacaoCommand": {
+        "type": "object",
+        "properties": {
+          "vacinaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dose": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataAplicacao": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

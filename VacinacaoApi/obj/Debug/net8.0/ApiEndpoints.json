@@ -48,6 +48,59 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "VacinacaoApi.Controllers.PessoasController",
+    "Method": "RegistrarVacinacao",
+    "RelativePath": "api/Pessoas/{pessoaId}/vacinacoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pessoaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "VacinacaoApi.Features.Pessoas.Commands.RegistrarVacinacao.RegistrarVacinacaoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VacinacaoApi.Controllers.PessoasController",
+    "Method": "ConsultarCartaoVacinacao",
+    "RelativePath": "api/Pessoas/{pessoaId}/vacinacoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pessoaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VacinacaoApi.Controllers.RegistrosVacinacaoController",
+    "Method": "ExcluirRegistroVacinacao",
+    "RelativePath": "api/RegistrosVacinacao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VacinacaoApi.Controllers.VacinasController",
     "Method": "CriarVacina",
     "RelativePath": "api/Vacinas",

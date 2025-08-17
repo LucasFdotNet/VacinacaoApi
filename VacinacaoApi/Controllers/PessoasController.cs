@@ -1,7 +1,11 @@
 ﻿using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
+
 using VacinacaoApi.Features.Pessoas.Commands;
+using VacinacaoApi.Features.Pessoas.Commands.RegistrarVacinacao;
 using VacinacaoApi.Features.Pessoas.Queries;
+using VacinacaoApi.Features.Pessoas.Queries.ConsultarCartaoVacinacao;
 
 namespace VacinacaoApi.Controllers;
 
@@ -53,5 +57,40 @@ public class PessoasController : ControllerBase
         }
 
         return NoContent();
+    }
+
+    // Registro de vacinação.
+
+    [HttpPost("{pessoaId}/vacinacoes")]
+    public async Task<IActionResult> RegistrarVacinacao(Guid pessoaId, [FromBody] RegistrarVacinacaoCommand command)
+    {
+        try
+        {
+            command.PessoaId = pessoaId;
+
+            var registroId = await _mediator.Send(command);
+
+            return Ok(new { Id = registroId });
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { Message = ex.Message });
+        }
+    }
+
+    [HttpGet("{pessoaId}/vacinacoes")]
+    public async Task<IActionResult> ConsultarCartaoVacinacao(Guid pessoaId)
+    {
+        try
+        {
+            var query = new ConsultarCartaoVacinacaoQuery { PessoaId = pessoaId };
+            var cartaoVacinacao = await _mediator.Send(query);
+
+            return Ok(cartaoVacinacao);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { Message = ex.Message });
+        }
     }
 }
