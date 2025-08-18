@@ -2,11 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using VacinacaoApi.Features.Vacinas.Commands;
 using VacinacaoApi.Features.Vacinas.Queries;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace VacinacaoApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class VacinasController : ControllerBase
 {
     private readonly IMediator _mediator;

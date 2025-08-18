@@ -6,4 +6,6 @@ public class CriarPessoaCommand : IRequest<Guid>
 {
     public string Nome { get; set; }
     public string NumeroIdentificacao { get; set; }
+    public string Senha { get; set; }
+
 }

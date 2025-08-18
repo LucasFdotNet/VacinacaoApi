@@ -1,13 +1,13 @@
 ﻿using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Authorization;
 using VacinacaoApi.Features.RegistrosVacinacao.Commands.ExcluirRegistro;
 
 namespace VacinacaoApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class RegistrosVacinacaoController : ControllerBase
 {
     private readonly IMediator _mediator;

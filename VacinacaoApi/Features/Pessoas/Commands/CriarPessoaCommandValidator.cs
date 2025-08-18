@@ -4,7 +4,6 @@ namespace VacinacaoApi.Features.Pessoas.Commands;
 
 public class CriarPessoaCommandValidator : AbstractValidator<CriarPessoaCommand>
 {
-    // Validações para Nome e NumeroIdentificacao
     public CriarPessoaCommandValidator()
     {
         RuleFor(p => p.Nome)
@@ -14,6 +13,9 @@ public class CriarPessoaCommandValidator : AbstractValidator<CriarPessoaCommand>
         RuleFor(p => p.NumeroIdentificacao)
             .NotEmpty().WithMessage("O número de identificação é obrigatório.")
             .Length(11, 14).WithMessage("O número de identificação deve ser válido (ex: CPF ou CNPJ).");
-        
+
+        RuleFor(p => p.Senha)
+            .NotEmpty().WithMessage("A senha é obrigatória.")
+            .MinimumLength(6).WithMessage("A senha deve ter no mínimo 6 caracteres.");
     }
 }

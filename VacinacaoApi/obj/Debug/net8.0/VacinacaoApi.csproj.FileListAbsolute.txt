@@ -175,4 +175,5 @@ C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoAp
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.genruntimeconfig.cache
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\ref\VacinacaoApi.dll
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\VacinacaoApi.sourcelink.json
+C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Estudo\Desafio_BackEnd\VacinacaoApi\VacinacaoApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

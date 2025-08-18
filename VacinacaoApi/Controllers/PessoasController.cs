@@ -1,7 +1,6 @@
 ﻿using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Authorization;
 using VacinacaoApi.Features.Pessoas.Commands;
 using VacinacaoApi.Features.Pessoas.Commands.RegistrarVacinacao;
 using VacinacaoApi.Features.Pessoas.Queries;
@@ -11,6 +10,7 @@ namespace VacinacaoApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class PessoasController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -21,6 +21,7 @@ public class PessoasController : ControllerBase
     }
 
     [HttpPost]
+    [AllowAnonymous]
     public async Task<IActionResult> CriarPessoa([FromBody] CriarPessoaCommand command)
     {
         var pessoaId = await _mediator.Send(command);
